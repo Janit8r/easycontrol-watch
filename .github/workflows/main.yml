@@ -29,3 +29,11 @@ jobs:
     - name: Build with Gradle
       working-directory: easycontrol
       run: ./gradlew build
+    - name: Package Files
+      run: pwd
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-package
+        path: /home/runner/work/Easycontrol/Easycontrol/easycontrol/app/src/main/res/raw/
