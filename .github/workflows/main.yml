@@ -25,10 +25,10 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: pwd;ls -al /home/runner/work/easycontrol-watch/easycontrol-watch/
+      run: chmod +x /home/runner/work/easycontrol-watch/easycontrol-watch/easycontrol/gradlew
     - name: Build with Gradle
       working-directory: easycontrol
-      run: /home/runner/work/easycontrol-watch/easycontrol-watch build
+      run: /home/runner/work/easycontrol-watch/easycontrol-watch/easycontrol/gradlew build
     - name: Package Files
       run: pwd
 
@@ -36,4 +36,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: my-package
-        path: /home/runner/work/easycontrol-watch/easycontrol-watch/app/src/main/res/raw/
+        path: /home/runner/work/easycontrol-watch/easycontrol-watch/easycontrol/app/src/main/res/raw/
