@@ -25,7 +25,7 @@ jobs:
         cache: gradle
 
     - name: Grant execute permission for gradlew
-      run: pwd;chmod +x /home/runner/work/easycontrol-watch/easycontrol-watch/gradlew
+      run: pwd;ls -al /home/runner/work/easycontrol-watch/easycontrol-watch/
     - name: Build with Gradle
       working-directory: easycontrol
       run: /home/runner/work/easycontrol-watch/easycontrol-watch build
